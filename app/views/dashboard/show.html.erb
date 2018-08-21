@@ -1,9 +1,9 @@
 <h2>Hello <%= current_user.username %>!</h2>
+<img src= <%= @github_user.avatar_url %>>
+<p>Followers: <%= @github_user.followers %></p>
+<p>Following: <%= @github_user.following %></p>
 
-<h3><%= @github_user.avatar %></h3>
-<h3>Followers: <%= @github_user.followers %></h3>
-<h3>Following:<%= @github_user.following %></h3>
-<h3>Starred Repos:<%= @github_user.starred %></h3>
+
 
 
  <%= button_to "Log Out", logout_path, method: :delete %>
