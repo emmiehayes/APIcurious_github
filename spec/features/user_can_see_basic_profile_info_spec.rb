@@ -3,7 +3,7 @@ require 'rails_helper'
 feature 'a user visiting the user show page' do 
   scenario 'can see basic profile information' do 
     user = create(:user)
-    allow_any_instance_of(ApplicationController).to recieve(:current_user).and_return(user)
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
     visit '/dashboard'
 
     
