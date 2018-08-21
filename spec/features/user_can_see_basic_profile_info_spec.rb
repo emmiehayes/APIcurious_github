@@ -9,8 +9,8 @@ feature 'a user visiting the user show page' do
     
     expect(page).to have_content(user.username)
     expect(page).to have_css('.profile_pic')
-    expect(page).to have_content('number of starred repos')
-    expect(page).to have_content('number of followers')
-    expect(page).to have_content('number following')
+    expect(page).to have_content('Followers')
+    expect(page).to have_content('Following')
+    # expect(page).to have_content('number of starred repos')
   end
 end
