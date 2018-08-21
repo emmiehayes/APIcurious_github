@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   delete 'logout', to: 'sessions#destroy', as: 'logout'
 
-  resources :users, only: [:show]
+  get '/dashboard', to: 'dashboard#show'
 end
