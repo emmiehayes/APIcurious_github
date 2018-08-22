@@ -10,6 +10,7 @@ feature "user visiting the root can log in" do
 
     click_button 'Sign In with GitHub'
 
+    expect(current_path).to eq('/dashboard')
     expect(page).to have_content("Emmie Hayes")
     expect(page).to have_button("Log Out")
   end
