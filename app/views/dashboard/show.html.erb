@@ -1,6 +1,32 @@
-<h2>Hello <%= current_user.username %>!</h2>
-<img src= <%= @github_user.avatar_url %>, class='profile_pic'>
-<p>Followers: <%= @github_user.followers %></p>
-<p>Following: <%= @github_user.following %></p>
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <figure class="image is-128x128">
+            <img class="is-rounded" src= <%= @github_user.avatar_url %>, class='profile_pic'>
+          </figure>
+        </div>
+        <div class="column is-half">
+          <h1 class="title is-size-1 ">
+            <%= current_user.username %>
+          </h1>
+        </div>
+        <div class="column">
+          <h1 class="title has-text-weight-light">
+            Followers: <%= @github_user.followers %>
+          </h1>
+        </div>
+        <div class="column">
+          <h1 class="title has-text-weight-light">
+            Following: <%= @github_user.following %>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<%= button_to "Log Out", logout_path, method: :delete %>
+  
+
+
