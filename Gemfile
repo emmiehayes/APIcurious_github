@@ -25,6 +25,7 @@ group :development, :test do
   gem 'faker'
   gem 'capybara'
   gem 'launchy'
+  gem 'faraday'
 end
 
 group :development do

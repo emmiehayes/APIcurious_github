@@ -7,6 +7,5 @@ class DashboardController < ApplicationController
     end
     user_response = conn.get("/user")
     @github_user = GithubUser.new(JSON.parse(user_response.body, symbolize_names: true))
-
   end
 end
