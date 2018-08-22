@@ -39,4 +39,10 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
 
+  def stub_omniauth
+    OmniAuth.config.test_mode = true
+    omniauth_hash = {'provider' => 'github','uid' => '8312280','info' => {'name' => 'Emmie Hayes','email' => 'emmiehayes2@gmail.com','image' => 'https://avatars3.githubusercontent.com/u/8312280?v=4'}, 'credentials' => {'token' => '0409ua09sd09u09aus90u'}}
+    OmniAuth.config.add_mock(:github, omniauth_hash)
+  end
+
 end
