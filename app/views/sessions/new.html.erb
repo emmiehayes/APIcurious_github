@@ -2,15 +2,15 @@
   <div class="hero-body">
     <div class="container">
       <% if current_user.blank? %>
-      <h1 class="title has-text-weight-light">
-        Welcome to API-CURIOUS
-      </h1>
-      <p class="title has-text-weight-bold is-5">Learning Goals:</p>
-         <p> Learn to consume data from third-party APIs</p>
-           <p>Continue to emphasize performance, UI, and overall user experience</p>
-           <p>Continue using TDD to drive all layers of development</p>
-           <p>Coordinate with project stakeholders to produce quality code and product</p>
-           <p>This project will be completed individually over a period of 4 days.</p>
+        <h1 class="title has-text-weight-light">
+          Welcome to API-CURIOUS
+        </h1>
+          <p class="title has-text-weight-bold is-5">Learning Goals:</p>
+          <p> Learn to consume data from third-party APIs</p>
+          <p>Continue to emphasize performance, UI, and overall user experience</p>
+          <p>Continue using TDD to drive all layers of development</p>
+          <p>Coordinate with project stakeholders to produce quality code and product</p>
+          <p>This project will be completed individually over a period of 4 days.</p>
       <% else %>
         <h1 class="title has-text-weight-light">
           You are signed in as <%= current_user.username %>.  Click the button UP THERE to sign out.
