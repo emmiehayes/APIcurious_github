@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     end
     redirect_to dashboard_path
   end
-  
+
   def destroy
     reset_session
   	redirect_to root_path

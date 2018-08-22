@@ -26,3 +26,8 @@
     </div>
   </div>
 </section>
+
+<h1>My Repositories</h1>
+<% @github_user.repos.each do |repo| %>
+<%= repo.name %>
+<% end %>
