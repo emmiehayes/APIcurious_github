@@ -10,7 +10,7 @@ class GithubService
   end
 
   def raw_user_repos
-    get_json('/users/#{@username}/repos')
+    get_json("/users/#{@username}/repos")
   end
 
   def conn
