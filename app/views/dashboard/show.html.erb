@@ -59,8 +59,7 @@
 
 <h1>Activity Feed</h1>
 <% @github_user.events.each do |event| %>
-Type: <%= event.type %>
+<p>Type: <%= event.type %>
 Repo: <%= event.repo_name %> 
-Message: <%= event.message %>
-Date: <%= event.created_at %>
+Date: <%= event.date %></p>
 <% end %>

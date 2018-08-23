@@ -12,6 +12,10 @@ class GithubService
   def raw_repo_list
     get_json("/users/#{@username}/repos")
   end
+
+  def raw_event_list 
+    get_json("/users/#{@username}/events")
+  end
   
   private
   
