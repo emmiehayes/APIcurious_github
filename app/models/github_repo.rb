@@ -4,10 +4,10 @@ class GithubRepo
 
   def initialize(data)
     @name         = data[:name]
-    @description  = data[:owner][:description]
-    @url          = data[:owner][:html_url]
-    @star_count   = data[:owner][:stargazers_count]
-    @created_at   = data[:owner][:created_at]
-    @updated_at   = data[:owner][:updated_at]
+    @description  = data[:description]
+    @url          = data[:git_url]
+    @star_count   = data[:stargazers_count]
+    @created_at   = data[:created_at]
+    @updated_at   = data[:updated_at]
   end
 end
