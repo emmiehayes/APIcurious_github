@@ -56,3 +56,11 @@
     </div>
   </div>
 </section>
+
+<h1>Activity Feed</h1>
+<% @github_user.events.each do |event| %>
+<%= event.type %>
+<%= event.name %> 
+<%= event.message %>
+<%= event.created_at %>
+<% end %>
