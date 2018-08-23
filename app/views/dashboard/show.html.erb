@@ -61,5 +61,10 @@
 <% @github_user.events.each do |event| %>
 <p>Type: <%= event.type %>
 Repo: <%= event.repo_name %> 
-Date: <%= event.date %></p>
+Date: <%= event.date %>
+<% unless event.commits == 0 %>
+  Commits: <% event.commits.each do |commit|%>
+          <%= commit.message %>
+          <% end %>
+      <% end %></p>
 <% end %>

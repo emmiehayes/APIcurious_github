@@ -7,11 +7,11 @@ class GithubRepo
     @description  = data[:description]
     @url          = data[:html_url]
     @star_count   = data[:stargazers_count]
-    @created_at   = format_date(data[:created_at])
-    @updated_at   = format_date(data[:updated_at])
+    @created_at   = format(data[:created_at])
+    @updated_at   = format(data[:updated_at])
   end
 
-  def format_date(date)
+  def format(date)
     date.to_date
   end
 
