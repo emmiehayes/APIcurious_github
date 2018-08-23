@@ -5,8 +5,6 @@ feature "user visiting the root can log in" do
     stub_omniauth
     visit root_path
 
-    expect(page).to have_button('Sign In with GitHub')
-
     click_button 'Sign In with GitHub'
 
     expect(current_path).to eq('/dashboard')
