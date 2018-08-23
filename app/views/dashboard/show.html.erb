@@ -26,13 +26,33 @@
     </div>
   </div>
 </section>
-
-<h1>My Repositories</h1>
-<p><% @github_user.repositories.each do |repository| %>
-    Name: <%= repository.name %>
-    Description: <%= repository.description %>
-    Link: <%= repository.url %>
-    Stars: <%= repository.star_count %>
-    Created: <%= repository.created_at %>
-    Updated: <%= repository.updated_at %>
-<% end %></p>
+<section class="section">
+  <div class="columns is-centered">
+    <div class="column is-narrow">
+      <table class="table has-content-centered is-striped is-hoverable is-bordered is-fullwidth">
+        <thead>
+          <tr>
+            <th class = 'has-text-grey-dark has-text-centered'>Name</th>
+            <th class = 'has-text-grey-dark has-text-centered'>Description</th>
+            <th class = 'has-text-grey-dark has-text-centered'>Link</th>
+            <th class = 'has-text-grey-dark has-text-centered'>Stars</th>
+            <th class = 'has-text-grey-dark has-text-centered'>Created</th>
+            <th class = 'has-text-grey-dark has-text-centered'>Updated</th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @github_user.repositories.each do |repository| %>
+          <tr>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= repository.name %></td>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= repository.description %></td>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= link_to 'View Code', repository.url %></td>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= repository.star_count %></td>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= repository.created_at %></td>
+            <td class = 'has-text-grey-dark has-text-centered is-size-6'><%= repository.updated_at %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
