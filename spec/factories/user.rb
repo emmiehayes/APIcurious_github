@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :user do
     provider { "GitHub" }
     uid { Faker::Number.number(10) }
-    username { Faker::Superhero.name }
+    username { Faker::Space.moon }
     name { Faker::StarWars.character }
     email { Faker::Internet.email }
     oauth_token { ENV["test_token"] }

@@ -1,14 +1,17 @@
 class GithubService 
 
-  def initialize(oauth_token)
+  def initialize(oauth_token, username)
     @oauth_token = oauth_token
+    @username = username
   end
   
   def raw_user
-    get_json("/user")
+    get_json('/user')
   end
 
-  private
+  def raw_user_repos
+    get_json('/users/#{@username}/repos')
+  end
 
   def conn
     Faraday.new(:url => "https://api.github.com/") do |faraday|
