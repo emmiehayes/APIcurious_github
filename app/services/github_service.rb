@@ -20,6 +20,8 @@ class GithubService
     end
   end
 
+  private
+
   def get_json(url)
     JSON.parse(conn.get(url).body, symbolize_names: true)
   end

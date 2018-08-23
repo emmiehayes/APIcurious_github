@@ -2,7 +2,6 @@ class GithubRepo
 
   attr_reader :name, :description, :url, :star_count, :created_at, :updated_at
 
-  
   def initialize(data)
     @name         = data[:name]
     @description  = data[:owner][:description]
