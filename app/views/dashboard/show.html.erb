@@ -28,6 +28,11 @@
 </section>
 
 <h1>My Repositories</h1>
-<% @github_user.repos.each do |repo| %>
-<%= repo.name %>
-<% end %>
+<p><% @github_user.repositories.each do |repository| %>
+    Name: <%= repository.name %>
+    Description: <%= repository.description %>
+    Link: <%= repository.url %>
+    Stars: <%= repository.star_count %>
+    Created: <%= repository.created_at %>
+    Updated: <%= repository.updated_at %>
+<% end %></p>
