@@ -56,15 +56,28 @@
     </div>
   </div>
 </section>
-
-<h1>Activity Feed</h1>
-<% @github_user.events.each do |event| %>
-<p>Type: <%= event.type %>
-Repo: <%= event.repo_name %> 
-Date: <%= event.date %>
-<% unless event.commits == 0 %>
-  Commits: <% event.commits.each do |commit|%>
-          <%= commit.message %>
+<div class="container">
+  <div class="notification">
+    <h1 class="title">Activity Feed</h1>
+    <% @github_user.events.each do |event| %>
+    <article class="message is-small is-warning is-centered">
+      <div class="message-header">
+        <p>Action: <%= event.type %></p>
+      </div>
+      <div class="message-body">
+        <div class="content">
+          <p><%= event.repo_name %></p>
+          <p><%= event.date %></p>
+          <% unless event.commits == 0 %>
+            <p><strong>Commits:</strong> <% event.commits.each do |commit| %></p>
+            <ul>
+              <li><%= commit.message %></li>
+            </ul>
+            <% end %>
           <% end %>
-      <% end %></p>
-<% end %>
+        </div>
+      </div>
+    </article>
+    <% end %>
+  </div>
+</div>
