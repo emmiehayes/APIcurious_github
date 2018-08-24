@@ -26,9 +26,6 @@ feature 'a user visiting the their dashboard' do
   end
 
   scenario 'sees recent commits in activity feed' do 
-    expect(page).to have_content('Type')
-    expect(page).to have_content('Repo')
-    expect(page).to have_content('Commits')
-    expect(page).to have_content('Date')
+    expect(page).to have_content('Activity Feed')
   end
 end
