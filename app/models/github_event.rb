@@ -3,10 +3,10 @@ class GithubEvent
   attr_reader :type, :repo_name, :commits, :date
 
   def initialize(data)
-    @type      = data[:type]
+    @type      = remove_text(data[:type])
     @repo_name = data[:repo][:name]
     @commits   = wrap(data[:payload][:commits])
-    @date      = data[:created_at]
+    @date      = format(data[:created_at])
   end
 
   def wrap(commits)
@@ -14,5 +14,13 @@ class GithubEvent
     commits.map do |commit|
       GithubCommit.new(commit)
     end
+  end
+
+  def remove_text(type)
+    type.gsub("Event", "")
+  end
+
+  def format(date)
+    (DateTime.parse(date)).strftime("%A, %B %d, %Y")
   end
 end
