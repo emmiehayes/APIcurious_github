@@ -1,6 +1,6 @@
 # README
 
-####SPIKE-- APIcurious
+#### SPIKE-- APIcurious
   
 As a spike, this project is a technical experiment (timebox: 4 days) aimed at learning how to consume data from an external API using an Omniauth authentication library.  For this spike, I chose to authenticate with Github.  
 
