@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+####SPIKE-- APIcurious
+  
+As a spike, this project is a technical experiment (timebox: 4 days) aimed at learning how to consume data from an external API using an Omniauth authentication library.  For this spike, I chose to authenticate with Github.  
 
-Things you may want to cover:
+Tech: 
 
-* Ruby version
+- Ruby v-2.4
+- Rails v-5.1
+- Postgres
+- Omniauth-github
+- Figaro
+- Faraday
+- Bulma
 
-* System dependencies
+Testing:
 
-* Configuration
+- RSpec
+- Capybara
+- FactoryBot
+- Faker
 
-* Database creation
 
-* Database initialization
+<img alt="root_screen" src="https://cl.ly/32780d2483ab/Screen%20Shot%202018-08-23%20at%208.33.50%20PM.jpg">
 
-* How to run the test suite
+<img alt="oauth_screen" src="https://cl.ly/1fc35df38af6/Screen%20Shot%202018-08-23%20at%208.34.28%20PM.jpg">
 
-* Services (job queues, cache servers, search engines, etc.)
+<img alt="user dashboard" src="https://cl.ly/1ada33cca2ef/Screen%20Shot%202018-08-23%20at%208.32.30%20PM.jpg">
 
-* Deployment instructions
+<img alt="user dashboard" src="https://cl.ly/733937270cb9/Screen%20Shot%202018-08-23%20at%208.42.31%20PM.jpg">
 
-* ...
+
+
